@@ -16,4 +16,15 @@
   (sqrt (+ (sqr x) (sqr y))))
 
 (check-expect (distance x y)  5)
-(check-expect (distance 12 5) 131)
+(check-expect (distance 12 5) 13)
+
+;; 1.2 - The Arithmetic of Strings
+;; Exercise 2
+
+(define prefix "hello")
+(define suffix "world")
+
+(define (glue prefix suffix)
+  (string-append prefix "_" suffix))
+
+(check-expect (glue prefix suffix) "hello_world")
