@@ -28,3 +28,15 @@
   (string-append prefix "_" suffix))
 
 (check-expect (glue prefix suffix) "hello_world")
+
+;; 1.3 Mixing It Up
+;; Exercise 3
+
+(define str "helloworld")
+(define ind "0123456789")
+(define i 5)
+
+(define (insert str i)
+  (string-append (substring str 0 i) "_" (substring str i)))
+
+(check-expect (insert str i) "hello_world")
