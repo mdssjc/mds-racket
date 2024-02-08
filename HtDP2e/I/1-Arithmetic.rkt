@@ -1,6 +1,7 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname 1-Arithmetic) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(require 2htdp/image)
 ;; 1-Arithmetic.rkt
 
 ;; I - Fixed-Size Data
@@ -50,3 +51,17 @@
 (check-expect (delete str i) "helloorld")
 (check-expect (delete str 0) "elloworld")
 ;;(check-expect (delete str 10) "helloorld")
+
+;; 1.4 The Arithmetic of Images
+
+;; Exercise 5
+
+;; Simple tree
+(define (my-scale value) (* value 1))
+(define leaf   (circle (my-scale 10) "solid" "green"))
+(define trunk  (rectangle (my-scale 10) (my-scale 20) "solid" "brown"))
+(define sheets (overlay/offset leaf 0 (my-scale 5) (overlay/offset leaf (my-scale 10) 0 leaf)))
+
+(define tree (overlay/offset sheets 0 (my-scale 15) trunk))
+
+tree
