@@ -65,3 +65,10 @@
 (define tree (overlay/offset sheets 0 (my-scale 15) trunk))
 
 tree
+
+;; Exercise 6
+
+(define cat (circle 11 "solid" "brown"))
+(define pixels (* (image-width cat) (image-height cat)))
+
+(check-expect pixels (* (* 11 2) (* 11 2)))
