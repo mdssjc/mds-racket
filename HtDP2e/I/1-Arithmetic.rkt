@@ -72,3 +72,12 @@ tree
 (define pixels (* (image-width cat) (image-height cat)))
 
 (check-expect pixels (* (* 11 2) (* 11 2)))
+
+;; 1.5 The Arithmetic of Booleans
+
+;; Exercise 7
+
+(define sunny  #true)
+(define friday #false)
+
+(check-expect (or (not sunny) friday) #false)
