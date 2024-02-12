@@ -81,3 +81,21 @@ tree
 (define friday #false)
 
 (check-expect (or (not sunny) friday) #false)
+
+;; 1.6 Mixing It Up with Booleans
+
+;; Exercise 8
+
+(define rh (rectangle 10 20 "solid" "black"))
+(define rw (rectangle 20 10 "solid" "black"))
+(define rs (rectangle 20 20 "solid" "black"))
+
+(define (tall-or-wide? img)
+  (cond [(> (image-height img) (image-width  img)) "tall"]
+        [(> (image-width  img) (image-height img)) "wide"]
+        [else "square"]))
+
+(check-expect (tall-or-wide? cat) "square")
+(check-expect (tall-or-wide? rh)  "tall")
+(check-expect (tall-or-wide? rw)  "wide")
+(check-expect (tall-or-wide? rs)  "square")
