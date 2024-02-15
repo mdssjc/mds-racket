@@ -120,3 +120,7 @@ tree
 (check-expect (convert 1)  1)
 (check-expect (convert #true)  10)
 (check-expect (convert #false) 20)
+
+;; Exercise 10
+
+"Now relax, eat, sleep, and then tackle the next chapter."
