@@ -99,3 +99,24 @@ tree
 (check-expect (tall-or-wide? rh)  "tall")
 (check-expect (tall-or-wide? rw)  "wide")
 (check-expect (tall-or-wide? rs)  "square")
+
+;; 1.7 Predicates: Know Thy Data
+
+;; Exercise 9
+
+(define in -123)
+
+(define (convert x)
+  (cond [(string? x)  (string-length x)]
+        [(image? x)   (* (image-width x) (image-height x))]
+        [(number? x)  (if (> x 0) x (* x -1))]
+        [(boolean? x) (if x 10 20)]))
+
+(check-expect (convert in) 123)
+(check-expect (convert "hello") 5)
+(check-expect (convert (rectangle 10 10 "solid" "black")) 100)
+(check-expect (convert -1) 1)
+(check-expect (convert 0)  0)
+(check-expect (convert 1)  1)
+(check-expect (convert #true)  10)
+(check-expect (convert #false) 20)
