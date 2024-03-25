@@ -133,3 +133,18 @@ tree
 
 (check-expect (distance x y)  5)
 (check-expect (distance 12 5) 13)
+
+;; Exercise 12
+
+(define (cvolume side)
+  (* side side side))
+
+(check-expect (cvolume 3) 27)
+(check-expect (cvolume 4) 64)
+
+(define (csurface side square)
+  (* side square))
+
+(check-expect (csurface 3 9) 27)
+(check-expect (csurface 4 16) 64)
+
