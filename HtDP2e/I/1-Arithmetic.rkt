@@ -13,11 +13,8 @@
 (define x 3)
 (define y 4)
 
-(define (distance x y)
-  (sqrt (+ (sqr x) (sqr y))))
-
-(check-expect (distance x y)  5)
-(check-expect (distance 12 5) 13)
+(check-expect (sqrt (+ (sqr x) (sqr y)))  5)
+(check-expect (sqrt (+ (sqr 12) (sqr 5))) 13)
 
 ;; 1.2 - The Arithmetic of Strings
 ;; Exercise 2
@@ -124,3 +121,15 @@ tree
 ;; Exercise 10
 
 "Now relax, eat, sleep, and then tackle the next chapter."
+
+;; 2 - Functions and Programs
+
+;; 2.1 Functions
+
+;; Exercise 11
+
+(define (distance x y)
+  (sqrt (+ (sqr x) (sqr y))))
+
+(check-expect (distance x y)  5)
+(check-expect (distance 12 5) 13)
