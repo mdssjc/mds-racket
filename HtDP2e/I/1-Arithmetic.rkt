@@ -30,7 +30,7 @@
 
 (check-expect (glue prefix suffix) "hello_world")
 
-;; 1.3 Mixing It Up
+;; 1.3 - Mixing It Up
 ;; Exercise 3
 
 (define str "helloworld")
@@ -52,7 +52,7 @@
 (check-expect (delete str 0) "elloworld")
 ;;(check-expect (delete str 10) "helloorld")
 
-;; 1.4 The Arithmetic of Images
+;; 1.4 - The Arithmetic of Images
 
 ;; Exercise 5
 
@@ -73,7 +73,7 @@ tree
 
 (check-expect pixels (* (* 11 2) (* 11 2)))
 
-;; 1.5 The Arithmetic of Booleans
+;; 1.5 - The Arithmetic of Booleans
 
 ;; Exercise 7
 
@@ -82,7 +82,7 @@ tree
 
 (check-expect (or (not sunny) friday) #false)
 
-;; 1.6 Mixing It Up with Booleans
+;; 1.6 - Mixing It Up with Booleans
 
 ;; Exercise 8
 
@@ -100,7 +100,7 @@ tree
 (check-expect (tall-or-wide? rw)  "wide")
 (check-expect (tall-or-wide? rs)  "square")
 
-;; 1.7 Predicates: Know Thy Data
+;; 1.7 - Predicates: Know Thy Data
 
 ;; Exercise 9
 
