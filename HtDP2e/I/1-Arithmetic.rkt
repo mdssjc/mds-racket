@@ -163,3 +163,10 @@ tree
   (substring sf 0 1))
 
 (check-expect (string-first "hello") "h")
+
+;; Exercise 14
+
+(define (string-last sl)
+  (substring sl (sub1 (string-length sl))))
+
+(check-expect (string-last "hello") "o")
