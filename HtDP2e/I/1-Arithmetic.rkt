@@ -148,3 +148,18 @@ tree
 (check-expect (csurface 3 9) 27)
 (check-expect (csurface 4 16) 64)
 
+;; Exercise 13
+
+; A 1String is a String of length 1,
+; including
+; – "\\" (the backslash),
+; – " " (the space bar),
+; – "\t" (tab),
+; – "\r" (return), and
+; – "\b" (backspace).
+; interpretation represents keys on the keyboard
+
+(define (string-first sf)
+  (substring sf 0 1))
+
+(check-expect (string-first "hello") "h")
