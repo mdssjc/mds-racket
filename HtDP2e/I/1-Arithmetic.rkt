@@ -170,3 +170,13 @@ tree
   (substring sl (sub1 (string-length sl))))
 
 (check-expect (string-last "hello") "o")
+
+;; Exercise 15
+
+(define (implication sunny friday)
+  (or (not sunny) friday))
+
+(check-expect (implication #true #true) #true)
+(check-expect (implication #true #false) #false)
+(check-expect (implication #false #true) #true)
+(check-expect (implication #false #false) #true)
