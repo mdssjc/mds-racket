@@ -180,3 +180,10 @@ tree
 (check-expect (implication #true #false) #false)
 (check-expect (implication #false #true) #true)
 (check-expect (implication #false #false) #true)
+
+;; Exercise 16
+
+(define (image-area img)
+  (* (image-width img) (image-height img)))
+
+(check-expect (image-area cat) pixels)
