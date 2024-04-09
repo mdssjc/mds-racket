@@ -187,3 +187,15 @@ tree
   (* (image-width img) (image-height img)))
 
 (check-expect (image-area cat) pixels)
+
+;; Exercise 17
+
+(define (image-classify img)
+  (cond [(> (image-height img) (image-width  img)) "tall"]
+        [(> (image-width  img) (image-height img)) "wide"]
+        [else "square"]))
+
+(check-expect (image-classify cat) "square")
+(check-expect (image-classify rh)  "tall")
+(check-expect (image-classify rw)  "wide")
+(check-expect (image-classify rs)  "square")
