@@ -199,3 +199,10 @@ tree
 (check-expect (image-classify rh)  "tall")
 (check-expect (image-classify rw)  "wide")
 (check-expect (image-classify rs)  "square")
+
+;; Exercise 18
+
+(define (string-join str1 str2)
+  (string-append str1 "_" str2))
+
+(check-expect (string-join prefix suffix) "hello_world")
