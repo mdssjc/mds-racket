@@ -206,3 +206,12 @@ tree
   (string-append str1 "_" str2))
 
 (check-expect (string-join prefix suffix) "hello_world")
+
+;; Exercise 19
+
+(define (string-insert str i)
+  (string-append (substring str 0 i) "_" (substring str i)))
+
+(check-expect (string-insert "helloworld" 5) "hello_world")
+(check-expect (string-insert "helloworld" 0) "_helloworld")
+(check-expect (string-insert "helloworld" 10) "helloworld_")
