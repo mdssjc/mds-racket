@@ -215,3 +215,12 @@ tree
 (check-expect (string-insert "helloworld" 5) "hello_world")
 (check-expect (string-insert "helloworld" 0) "_helloworld")
 (check-expect (string-insert "helloworld" 10) "helloworld_")
+
+;; Exercise 20
+(define (string-delete str i)
+  (string-append (substring str 0 i)
+                 (substring str (add1 i))))
+
+(check-expect (string-delete str 0) "elloworld")
+(check-expect (string-delete str 5) "helloorld")
+(check-expect (string-delete str 9) "helloworl")
