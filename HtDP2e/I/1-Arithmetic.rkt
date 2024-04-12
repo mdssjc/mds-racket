@@ -222,3 +222,11 @@ tree
 (check-expect (string-delete str 0) "elloworld")
 (check-expect (string-delete str 5) "helloorld")
 (check-expect (string-delete str 9) "helloworl")
+
+;; Exercise 21
+
+(define (ff a)
+  (* 10 a))
+
+(check-expect (ff (ff 1)) 100)
+(check-expect (+ (ff 1) (ff 1)) 20)
