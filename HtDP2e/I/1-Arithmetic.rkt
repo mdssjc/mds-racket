@@ -230,3 +230,10 @@ tree
 
 (check-expect (ff (ff 1)) 100)
 (check-expect (+ (ff 1) (ff 1)) 20)
+
+;; Exercise 22
+
+(define (distance-to-origin x y)
+  (sqrt (+ (sqr x) (sqr y))))
+
+(check-expect (distance-to-origin 3 4) 5)
