@@ -237,3 +237,7 @@ tree
   (sqrt (+ (sqr x) (sqr y))))
 
 (check-expect (distance-to-origin 3 4) 5)
+
+;; Exercise 23
+
+(check-expect (string-first "hello world") "h")
