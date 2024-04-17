@@ -241,3 +241,7 @@ tree
 ;; Exercise 23
 
 (check-expect (string-first "hello world") "h")
+
+;; Exercise 24
+
+(check-expect (==> #true #false) #false)
