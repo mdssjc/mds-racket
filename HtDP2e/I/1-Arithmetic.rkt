@@ -189,9 +189,10 @@ tree
 ;; Exercise 17
 
 (define (image-classify img)
-  (cond [(> (image-height img) (image-width  img)) "tall"]
-        [(> (image-width  img) (image-height img)) "wide"]
-        [else "square"]))
+  (cond
+    [(> (image-height img) (image-width img)) "tall"]
+    [(= (image-height img) (image-width img)) "square"]
+    [(< (image-height img) (image-width img)) "wide"]))
 
 (check-expect (image-classify cat) "square")
 (check-expect (image-classify rh)  "tall")
@@ -245,3 +246,7 @@ tree
 ;; Exercise 24
 
 (check-expect (==> #true #false) #false)
+
+;; Exercise 25
+
+;; replace >= to >, and <= to <
