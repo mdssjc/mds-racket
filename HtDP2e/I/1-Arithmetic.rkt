@@ -208,8 +208,10 @@ tree
 
 ;; Exercise 19
 
-(define (string-insert str i)
-  (string-append (substring str 0 i) "_" (substring str i)))
+(define (string-insert s i)
+  (string-append (substring s 0 i)
+                 "_"
+                 (substring s i)))
 
 (check-expect (string-insert "helloworld" 5) "hello_world")
 (check-expect (string-insert "helloworld" 0) "_helloworld")
@@ -250,3 +252,7 @@ tree
 ;; Exercise 25
 
 ;; replace >= to >, and <= to <
+
+;; Exercise 26
+
+(check-expect (string-insert "helloworld" 6) "hellow_orld")
